@@ -1,0 +1,22 @@
+Please install elasticsearch for the search to work properly.
+Commands:
+
+1. git clone https://github.com/sumanc01/movie_review.git
+2. cd movie_review
+3. bundle install
+4. rails s
+
+Next for the search to work make sure elastic search is installed and running
+5. To install elastic search use : 
+   > brew install elasticsearch
+   #Now we need to index the movies currently existing by the below command
+   > rake searchkick:reindex CLASS=Movie
+   # Start the elasticsearch server
+   >launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
+   or
+   >elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+
+
+
+
+
